@@ -39,8 +39,8 @@ import demo.base.BaseClass;
 			 WebDriverWait webDriverWait = new WebDriverWait(driver,30);
 			 WebElement form=driver.findElement(By.xpath("//div[@class='_36HLxm col col-3-5']//form"));
 			 TimeUnit.SECONDS.sleep(5);
-			 form.findElement(By.xpath("//div[@class='IiD88i _351hSN']//input[@type='text']")).sendKeys("9492324701");		
-			 form.findElement(By.xpath("//input[@type='password']")).sendKeys("Lahari@1998");
+			 form.findElement(By.xpath("//div[@class='IiD88i _351hSN']//input[@type='text']")).sendKeys("9573677931");		
+			 form.findElement(By.xpath("//input[@type='password']")).sendKeys("Manasa@1997");
 			 form.findElement(By.xpath("//div[@class='_1D1L_j']//button[@type='submit']")).click();
 			 TimeUnit.SECONDS.sleep(5);
 			 if( driver.findElement(By.xpath("//div[contains(text(),'Lahari')]")).isDisplayed())
