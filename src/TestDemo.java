@@ -7,8 +7,6 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-//input array=[2,1,3,6,4,5]
-//output = [2,4,6,5,3,1]
 public class TestDemo {
 
 	static void sortArray(int[] a) {
