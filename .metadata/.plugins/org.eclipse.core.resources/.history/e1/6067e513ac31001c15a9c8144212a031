@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class demo {
+	
+	
+	public static void main(String args[]) {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	System.out.println("Enter ur name: ");
+	String input = sc.next();
+	
+	if(input.equalsIgnoreCase("Manasa")) {
+		System.out.println("true");
+	}
+	else {
+		System.out.println("false");
+	}
+	
+	/*
+	 * ArrayList<String> list = new ArrayList<String>();
+	 * 
+	 * list.add("hi"); list.add("hello"); list.add("hii");
+	 * 
+	 * for(String i:list) { System.out.println(i); }
+	 */
+}
+}
+

@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class demo {
+	
+	public static String removeDuplicates(String input) {
+		input=input.toLowerCase();
+		char[] temp = input.toCharArray();
+		for(int i=0;i<input.length();i++) {
+			for(int j=i+1;j<input.length();j++) {
+				if(temp[i]==temp[j]) {
+					temp[j]='0';
+				}
+				else
+					continue;
+			}
+		}
+		String result = String.valueOf(temp).replaceAll("0", "");
+		return result;
+		}
+	
+	public static int sumOfDigits(int number) {
+		int sum=0;
+		while(number!=0) {
+		sum=sum+(number%10);
+		number=number/10;
+		}
+		return sum;
+	}
+	
+	public static void lastTwoDigits(int[] A) {
+		for(int i=0;i<A.length;i++) {
+			int temp = A[i]*5;
+			String value=Integer.toString(temp);
+			System.out.println(value.substring(value.length()-2));
+		}
+	}
+	
+	
+	public static void main(String args[]) {
+	
+		/*
+		 * Scanner sc = new Scanner(System.in);
+		 * 
+		 * System.out.println("Enter a number: "); String input = sc.next();
+		 */
+	int[] a = {12,10,14,13};
+	int[] result = lastTwoDigits(a);
+	System.out.println(result);
+}
+}

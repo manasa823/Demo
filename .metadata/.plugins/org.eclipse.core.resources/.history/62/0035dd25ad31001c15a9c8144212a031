@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class demo {
+	
+	
+	public static void main(String args[]) {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	System.out.println("Enter a String: ");
+	String input = sc.next();
+	
+	char[] temp = input.toCharArray();
+	System.out.println(temp);
+	
+	for(int i=0;i<input.length();i++) {
+		for(int j=i+1;j<input.length();j++) {
+			if(temp[i]==temp[j]) {
+				temp[j]='0';
+			}
+			else
+				continue;
+		}
+	}
+	System.out.println(temp);	
+}
+}
+

@@ -1,0 +1,103 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class demo {
+	
+	public static String removeDuplicates(String input) {
+		input=input.toLowerCase();
+		char[] temp = input.toCharArray();
+		for(int i=0;i<input.length();i++) {
+			for(int j=i+1;j<input.length();j++) {
+				if(temp[i]==temp[j]) {
+					temp[j]='0';
+				}
+				else
+					continue;
+			}
+		}
+		String result = String.valueOf(temp).replaceAll("0", "");
+		return result;
+		}
+	
+	public static int sumOfDigits(int number) {
+		int sum=0;
+		while(number!=0) {
+		sum=sum+(number%10);
+		number=number/10;
+		}
+		return sum;
+	}
+	
+	public static void lastTwoDigits(int[] A) {
+		for(int i=0;i<A.length;i++) {
+			int temp = A[i]*5;
+			String value=Integer.toString(temp);
+			System.out.println(value.substring(value.length()-2));
+		}
+	}
+	
+	public static String longestPalindrome(String s) {
+		int len = s.length();
+		String pal="";
+		for(int i=0;i<len;i++) {
+			for(int j=i;j<len;j++) {
+				String sub = s.substring(i,j),rev = "";
+				for(int k=sub.length()-1;k>=0;k--){
+					char ch = sub.charAt(k);
+					rev = rev+ch;
+				}
+				if(sub.equalsIgnoreCase(rev) && sub.length()>pal.length()) {
+					pal = sub;
+					System.out.println(pal);
+				}
+				else
+					continue;
+			}
+		}
+		return pal;
+	}
+	
+	public static ArrayList<Integer> duplicateNumbers(int[] a) {
+		ArrayList<Integer> temp = new ArrayList<Integer>();
+		for(int i=0;i<a.length;i++) {
+			for(int j=i+1;j<a.length;j++) {
+				if(a[i]==a[j]) {
+					temp.add(a[i]);	
+				}
+			}
+		}
+		return temp;
+	}
+	
+	public static void duplicateCount(String s) {
+		char[] c = s.toCharArray();
+		Map<Character,Integer> result = new HashMap<Character,Integer>();
+		for(int i=0;i<s.length();i++) {
+			int count=0;
+			for(int j=i+1;j<s.length();j++) {
+				if(c[i]==c[j]) {
+					count++;
+				}
+			}
+			if(count>0) {
+				result.put(c[i], count);
+			}
+		}
+		System.out.println(result);
+	}
+	
+	
+	public static void main(String args[]) {
+	
+		/*
+		 * Scanner sc = new Scanner(System.in);
+		 * 
+		 * System.out.println("Enter a number: "); String input = sc.next();
+		 */
+		int[] a = {20,34,53,62,34,45,62,74,4,71,56,20};
+		duplicateCount("Manasa");
+	
+}
+}

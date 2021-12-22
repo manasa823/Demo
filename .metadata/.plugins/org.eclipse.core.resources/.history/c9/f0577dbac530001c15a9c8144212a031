@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+
+public class demo {
+	
+	int age;
+	
+	public demo() {
+		
+	}
+	
+	public demo(int age, String name) {
+		this.age = age;
+	}
+	
+	ArrayList<String> list =  new ArrayList<String>();
+	
+	list[0] = "hi";
+	list[2] = "hello";
+	list[1] = "hii";
+	
+	for(String i:list) {
+		System.out.println(i);
+	}
+}
+}
